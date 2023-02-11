@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "horizon",
+            "database": "horizon.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
