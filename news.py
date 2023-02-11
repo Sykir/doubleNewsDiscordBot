@@ -2,7 +2,7 @@ import dal
 import secret
 from lxml import html
 import requests
-
+import logging
 
 def getLastNews(url):
     return dal.getNews(url)
@@ -33,8 +33,9 @@ def findNews():
         content = ''.join(articleTree.xpath("/html/body/main/article/div[1]/div/p/text()"))
 
         if dal.getNews(url):
-            print(f"news already displayed {url}")
+            logging.info(f"news already displayed {url}")
         else:
+            logging.info(f"news found ! {url}")
             addnews(url)
             articles.append({'title': title, 'url': url,'image': image, 'content': content})
 

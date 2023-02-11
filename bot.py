@@ -2,6 +2,7 @@ import asyncio
 import discord
 import news
 import secret
+import logging
 
 class horizon(discord.Client):
     def __init__(self, *args, **kwargs):
@@ -12,8 +13,8 @@ class horizon(discord.Client):
         self.bg_task = self.loop.create_task(self.checkingNews())
 
     async def on_ready(self):
-        print(f'Logged in as {self.user} (ID: {self.user.id})')
-        print('------')
+        logging.info(f'Logged in as {self.user} (ID: {self.user.id})')
+        logging.info('------')
 
     async def checkingNews(self):
         await self.wait_until_ready()

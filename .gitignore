@@ -1,2 +1,4 @@
 .env
 horizon.db
+horizon.xml
+horizon.log
