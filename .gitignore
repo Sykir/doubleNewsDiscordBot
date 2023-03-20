@@ -2,5 +2,5 @@
 horizon.db
 horizon.xml
 horizon.log
-/__pycache__
-/.vscode
+__pycache__/**
+/.vscode/**

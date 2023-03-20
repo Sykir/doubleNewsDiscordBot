@@ -3,6 +3,7 @@ import discord
 import news
 import secret
 import logging
+import facebook
 
 class horizon(discord.Client):
     def __init__(self, *args, **kwargs):
@@ -29,6 +30,7 @@ class horizon(discord.Client):
                 await channel.send(image)
                 await channel.send(msg)
                 await channel.send("_ _")
+                facebook.postToPage(article)
             await asyncio.sleep(60)  # task runs every 60 seconds
 
 async def checkNews():

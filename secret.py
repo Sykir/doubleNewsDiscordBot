@@ -4,6 +4,9 @@ def setup():
     getSecret("TOKENBOT")
     getSecret("URLCHECK")
     getSecret("CHANNELID")
+    getSecret("FACEBOOK_PAGE_ID")
+    getSecret("FACEBOOK_ACCESS_TOKEN")
+
 
 def promptSecret(key):
     value = input("Le secret {} n'existe pas. Entrez une valeur pour la créer : ".format(key))

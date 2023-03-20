@@ -33,11 +33,11 @@ def findNews():
         content = ''.join(articleTree.xpath("/html/body/main/article/div[1]/div/p/text()"))
 
         if dal.getNews(url):
-            logging.info(f"news already displayed {url}")
+            logging.debug(f"news already displayed {url}")
         else:
             logging.info(f"news found ! {url}")
             addnews(url)
             articles.append({'title': title, 'url': url,'image': image, 'content': content})
 
-
+    articles.reverse()
     return articles
